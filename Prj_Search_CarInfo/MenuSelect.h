@@ -1,6 +1,6 @@
 #pragma once
 
-//시각화 메뉴 선택 클래스 
+//메뉴 선택
 
 #include "Sedan.h"
 #include "Suv.h"
