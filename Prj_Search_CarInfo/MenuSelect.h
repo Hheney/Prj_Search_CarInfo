@@ -108,6 +108,11 @@ inline void MenuSelect::Menu(void)
 			InitXYPos();
 			GotoXY(nXPosition, nYPosition);
 			cout << "Truck 정보 보기";
+			Sleep(2000);
+			system("cls");
+
+			truck.setGear(truck.printInputGear());
+			truck.printMaxSpeed();
 
 			system("PAUSE");
 			break;
@@ -117,6 +122,11 @@ inline void MenuSelect::Menu(void)
 			InitXYPos();
 			GotoXY(nXPosition, nYPosition);
 			cout << "Bus 정보 보기";
+			Sleep(2000);
+			system("cls");
+
+			bus.setGear(bus.printInputGear());
+			bus.printMaxSpeed();
 
 			system("PAUSE");
 			break;
