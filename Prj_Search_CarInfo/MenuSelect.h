@@ -85,6 +85,7 @@ inline void MenuSelect::Menu(void)
 			
 			sedan.setGear(sedan.printInputGear());
 			sedan.printMaxSpeed();
+			sedan.printDistance();
 			
 			system("PAUSE");
 			break;
@@ -99,6 +100,7 @@ inline void MenuSelect::Menu(void)
 
 			suv.setGear(suv.printInputGear());
 			suv.printMaxSpeed();
+			suv.printDistance();
 			
 			system("PAUSE");
 			break;
@@ -113,6 +115,7 @@ inline void MenuSelect::Menu(void)
 
 			truck.setGear(truck.printInputGear());
 			truck.printMaxSpeed();
+			truck.printDistance();
 
 			system("PAUSE");
 			break;
@@ -127,6 +130,7 @@ inline void MenuSelect::Menu(void)
 
 			bus.setGear(bus.printInputGear());
 			bus.printMaxSpeed();
+			bus.printDistance();
 
 			system("PAUSE");
 			break;

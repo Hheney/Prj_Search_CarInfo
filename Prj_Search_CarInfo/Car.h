@@ -18,6 +18,8 @@ public:
 	void setGear(int nGear) { m_nGear = nGear; }
 
 	void printMaxSpeed(void) const;
+	void printDistance(void);
+	double InputTime(void); //이동 시간을 입력받는 메소드
 	int printInputGear(void); //기어 입력을 받아 기어단수 리턴 메소드
 
 
@@ -48,6 +50,31 @@ inline void Car::printMaxSpeed(void) const
 	}
 	cout << "---------------" << endl;
 }
+
+inline void Car::printDistance(void)
+{
+	using namespace std;
+
+	double dbTravelTime = InputTime();
+	cout << "---------------" << endl;
+	for (const auto& carInfo : m_carInfos)
+	{
+		cout << carInfo.getBrand() << "의 이동 거리 = " << carInfo.getSpeed(m_nGear) * dbTravelTime << "km" << endl;
+	}
+	cout << "---------------" << endl;
+}
+
+inline double Car::InputTime(void)
+{
+	using namespace std;
+	double dbTime = 0.0;
+
+	cout << "이동할 시간을 입력해주세요. 예시) 10.2" << endl << endl;
+	cin >> dbTime;
+
+	return dbTime;
+}
+
 
 inline int Car::printInputGear(void)
 {
