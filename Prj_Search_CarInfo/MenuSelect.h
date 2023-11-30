@@ -66,10 +66,10 @@ private:
 	int MoveORSelect(void);
 
 	//자동차 정보 검색 관련 메소드
-	void PrintSedanInfo(void);
-	void PrintSuvInfo(void);
-	void PrintTruckInfo(void);
-	void PrintBusInfo(void);
+	void printSedanInfo(void);
+	void printSuvInfo(void);
+	void printTruckInfo(void);
+	void printBusInfo(void);
 
 protected:
 };
@@ -86,19 +86,19 @@ inline void MenuSelect::Menu(void)
 		switch (MoveORSelect())
 		{
 		case 0:
-			PrintSedanInfo(); //Sedan 정보 출력
+			printSedanInfo(); //Sedan 정보 출력
 			break;
 
 		case 1:
-			PrintSuvInfo(); //Suv 정보 출력
+			printSuvInfo(); //Suv 정보 출력
 			break;
 
 		case 2:
-			PrintTruckInfo(); //Truck 정보 출력
+			printTruckInfo(); //Truck 정보 출력
 			break;
 
 		case 3:
-			PrintBusInfo(); //Bus 정보 출력
+			printBusInfo(); //Bus 정보 출력
 			break;
 
 		case 4:
@@ -239,7 +239,7 @@ inline int MenuSelect::MoveORSelect(void)
 	}
 }
 
-inline void MenuSelect::PrintSedanInfo(void)
+inline void MenuSelect::printSedanInfo(void)
 {
 	using namespace std;
 
@@ -259,7 +259,7 @@ inline void MenuSelect::PrintSedanInfo(void)
 	system("PAUSE");
 }
 
-inline void MenuSelect::PrintSuvInfo(void)
+inline void MenuSelect::printSuvInfo(void)
 {
 	using namespace std;
 
@@ -279,7 +279,7 @@ inline void MenuSelect::PrintSuvInfo(void)
 	system("PAUSE");
 }
 
-inline void MenuSelect::PrintTruckInfo(void)
+inline void MenuSelect::printTruckInfo(void)
 {
 	using namespace std;
 
@@ -299,7 +299,7 @@ inline void MenuSelect::PrintTruckInfo(void)
 	system("PAUSE");
 }
 
-inline void MenuSelect::PrintBusInfo(void)
+inline void MenuSelect::printBusInfo(void)
 {
 	using namespace std;
 
