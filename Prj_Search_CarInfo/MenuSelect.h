@@ -87,6 +87,7 @@ inline void MenuSelect::Menu(void)
 			Sleep(2000);
 			system("cls");
 			
+			cout << sedan << endl;
 			sedan.setGear(sedan.printInputGear());
 			sedan.printMaxSpeed();
 			sedan.printDistance();
@@ -102,6 +103,7 @@ inline void MenuSelect::Menu(void)
 			Sleep(2000);
 			system("cls");
 
+			cout << suv << endl;
 			suv.setGear(suv.printInputGear());
 			suv.printMaxSpeed();
 			suv.printDistance();
@@ -117,6 +119,7 @@ inline void MenuSelect::Menu(void)
 			Sleep(2000);
 			system("cls");
 
+			cout << truck << endl;
 			truck.setGear(truck.printInputGear());
 			truck.printMaxSpeed();
 			truck.printDistance();
@@ -132,6 +135,7 @@ inline void MenuSelect::Menu(void)
 			Sleep(2000);
 			system("cls");
 
+			cout << bus << endl;
 			bus.setGear(bus.printInputGear());
 			bus.printMaxSpeed();
 			bus.printDistance();
