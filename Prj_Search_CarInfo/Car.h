@@ -83,16 +83,15 @@ inline int Car::printInputGear(void)
 
 	cout << "기어(1~4)를 선택하세요: ";
 	cin >> nGear;
-	if (!cin)
+	while (!cin || nGear < 1 || nGear > 4)
 	{
-		while (1)
+		if (!cin)
 		{
 			cin.clear();
-			cin.ignore(1, '/n');
-			cout << "기어를 다시 선택하세요: ";
-			cin >> nGear;
-			if (nGear >= 1 && nGear <= 4) break;
+			cin.ignore(1, '\n');
 		}
+		cout << "기어를 다시 선택하세요: ";
+		cin >> nGear;	
 	}
 
 	return nGear;

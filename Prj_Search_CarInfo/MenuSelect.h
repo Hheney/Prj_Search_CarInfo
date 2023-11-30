@@ -24,13 +24,15 @@ public:
 	Truck truck;
 	Bus bus;
 
-	MenuSelect(void) {
+	MenuSelect(void) {}
 
+	MenuSelect(int nXPos, int nYPos)
+	{
+		setXPos(nXPos);
+		setYPos(nYPos);
 	}
 
-	~MenuSelect() {
-
-	}
+	~MenuSelect() {}
 
 	//setter
 	void setXPos(int nXPos) //콘솔 X좌표값 설정 메소드
@@ -53,6 +55,7 @@ private:
 
 	int nXPosition = DEF_X_COORD, nYPosition = DEF_Y_COORD;
 
+	//메뉴 관련 메소드
 	void MenuPrint(void);
 	void InitXYPos(void);
 	void TitlePrint(void);				
@@ -60,6 +63,7 @@ private:
 	int InputKey(void);
 	int MoveORSelect(void);
 
+	//자동차 정보 검색 관련 메소드
 
 protected:
 };
@@ -183,7 +187,7 @@ inline void MenuSelect::InitXYPos(void)
 
 inline void MenuSelect::TitlePrint(void)
 {
-
+	//fstream 파일처리 사용하여 출력하도록 메소드 구성
 }
 
 inline void MenuSelect::GotoXY(int nXPos, int nYPos)

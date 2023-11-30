@@ -8,8 +8,6 @@
 
 int main()
 {
-	using namespace std;
-
 	MenuSelect menu;
 
 	menu.Menu();
