@@ -9,6 +9,7 @@
 
 #define DEF_X_COORD (46)			//디폴트 X좌표 값
 #define DEF_Y_COORD (13)			//디폴트 Y좌표 값
+#define DEF_STANDBY_TIME (2000)		//대기 시간(ms), Sleep 메소드 사용
 
 enum class WASDKeyOrSpace
 {
@@ -56,6 +57,7 @@ private:
 	int nXPosition = DEF_X_COORD, nYPosition = DEF_Y_COORD;
 
 	//메뉴 관련 메소드
+	void StandbyandClear(void);
 	void MenuPrint(void);
 	void InitXYPos(void);
 	void TitlePrint(void);				
@@ -153,6 +155,12 @@ inline void MenuSelect::Menu(void)
 		}
 		system("cls");
 	}
+}
+
+inline void MenuSelect::StandbyandClear(void)
+{
+	Sleep(DEF_STANDBY_TIME);
+	system("cls");
 }
 
 inline void MenuSelect::MenuPrint(void)
