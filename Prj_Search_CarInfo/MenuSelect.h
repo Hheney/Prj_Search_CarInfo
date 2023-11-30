@@ -66,6 +66,10 @@ private:
 	int MoveORSelect(void);
 
 	//자동차 정보 검색 관련 메소드
+	void PrintSedanInfo(void);
+	void PrintSuvInfo(void);
+	void PrintTruckInfo(void);
+	void PrintBusInfo(void);
 
 protected:
 };
@@ -82,67 +86,19 @@ inline void MenuSelect::Menu(void)
 		switch (MoveORSelect())
 		{
 		case 0:
-			system("cls");
-			InitXYPos();
-			GotoXY(nXPosition, nYPosition);
-			cout << "Sedan 정보 보기 선택" << endl;
-			Sleep(2000);
-			system("cls");
-			
-			cout << sedan << endl;
-			sedan.setGear(sedan.printInputGear());
-			sedan.printMaxSpeed();
-			sedan.printDistance();
-			
-			system("PAUSE");
+			PrintSedanInfo(); //Sedan 정보 출력
 			break;
 
 		case 1:
-			system("cls");
-			InitXYPos();
-			GotoXY(nXPosition, nYPosition);
-			cout << "SUV 정보 보기 선택";
-			Sleep(2000);
-			system("cls");
-
-			cout << suv << endl;
-			suv.setGear(suv.printInputGear());
-			suv.printMaxSpeed();
-			suv.printDistance();
-			
-			system("PAUSE");
+			PrintSuvInfo(); //Suv 정보 출력
 			break;
 
 		case 2:
-			system("cls");
-			InitXYPos();
-			GotoXY(nXPosition, nYPosition);
-			cout << "Truck 정보 보기";
-			Sleep(2000);
-			system("cls");
-
-			cout << truck << endl;
-			truck.setGear(truck.printInputGear());
-			truck.printMaxSpeed();
-			truck.printDistance();
-
-			system("PAUSE");
+			PrintTruckInfo(); //Truck 정보 출력
 			break;
 
 		case 3:
-			system("cls");
-			InitXYPos();
-			GotoXY(nXPosition, nYPosition);
-			cout << "Bus 정보 보기";
-			Sleep(2000);
-			system("cls");
-
-			cout << bus << endl;
-			bus.setGear(bus.printInputGear());
-			bus.printMaxSpeed();
-			bus.printDistance();
-
-			system("PAUSE");
+			PrintBusInfo(); //Bus 정보 출력
 			break;
 
 		case 4:
@@ -281,4 +237,84 @@ inline int MenuSelect::MoveORSelect(void)
 			break;
 		}
 	}
+}
+
+inline void MenuSelect::PrintSedanInfo(void)
+{
+	using namespace std;
+
+	system("cls");
+	InitXYPos(); //X, Y값 초기화
+
+	GotoXY(nXPosition, nYPosition); //매개변수 좌표값으로 이동
+	cout << "Sedan 정보 보기 선택" << endl;
+
+	StandbyandClear(); //대기 후 화면 클리어
+
+	cout << sedan << endl; //세단 정보 출력
+	sedan.setGear(sedan.printInputGear()); //기어 선택
+	sedan.printMaxSpeed(); //최대 속도 출력
+	sedan.printDistance(); //거리 입력 및 출력
+
+	system("PAUSE");
+}
+
+inline void MenuSelect::PrintSuvInfo(void)
+{
+	using namespace std;
+
+	system("cls");
+	InitXYPos(); //X, Y값 초기화
+
+	GotoXY(nXPosition, nYPosition); //매개변수 좌표값으로 이동
+	cout << "SUV 정보 보기 선택" << endl;
+
+	StandbyandClear(); //대기 후 화면 클리어
+
+	cout << suv << endl; //suv 정보 출력
+	suv.setGear(suv.printInputGear()); //기어 선택
+	suv.printMaxSpeed(); //최대 속도 출력
+	suv.printDistance(); //거리 입력 및 출력
+
+	system("PAUSE");
+}
+
+inline void MenuSelect::PrintTruckInfo(void)
+{
+	using namespace std;
+
+	system("cls");
+	InitXYPos(); //X, Y값 초기화
+
+	GotoXY(nXPosition, nYPosition); //매개변수 좌표값으로 이동
+	cout << "Truck 정보 보기 선택" << endl;
+
+	StandbyandClear(); //대기 후 화면 클리어
+
+	cout << truck << endl; //suv 정보 출력
+	truck.setGear(truck.printInputGear()); //기어 선택
+	truck.printMaxSpeed(); //최대 속도 출력
+	truck.printDistance(); //거리 입력 및 출력
+
+	system("PAUSE");
+}
+
+inline void MenuSelect::PrintBusInfo(void)
+{
+	using namespace std;
+
+	system("cls");
+	InitXYPos(); //X, Y값 초기화
+
+	GotoXY(nXPosition, nYPosition); //매개변수 좌표값으로 이동
+	cout << "Bus 정보 보기 선택" << endl;
+
+	StandbyandClear(); //대기 후 화면 클리어
+
+	cout << bus << endl; //suv 정보 출력
+	bus.setGear(bus.printInputGear()); //기어 선택
+	bus.printMaxSpeed(); //최대 속도 출력
+	bus.printDistance(); //거리 입력 및 출력
+
+	system("PAUSE");
 }
