@@ -16,7 +16,7 @@ enum class WASDKeyOrSpace
 	Up = 0, Down, Left, Right, SpaceBar
 };
 
-class MenuSelect : public Sedan, Suv, Truck, Bus
+class MenuSelect
 {
 public:
 
